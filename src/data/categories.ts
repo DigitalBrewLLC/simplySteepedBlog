@@ -1,8 +1,8 @@
 // List of categories for blog posts
 export const CATEGORIES = [
 	'Tea Spotlights',
-	'Tea Guide',
+	'Tea Guides',
 	'Tea Reviews',
-	'Tea Innovations',
-	'Category 5'
+	'Tea Musings',
+	'Health and Wellness'
 ] as const

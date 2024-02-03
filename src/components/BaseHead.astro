@@ -11,11 +11,14 @@ export interface Props {
 
 const { title, description = siteConfig.description, articleDate } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const socialImageURL = new URL('../public/branding/DarkSimpySteeped', Astro.url).href
+const socialImageURL = new URL('../public/branding/DarkSimpySteeped', Astro.url)
+	.href
 
 const titleSeparator = '•'
 
-const siteTitle = title ? `${title} ${titleSeparator} ${siteConfig.title}` : `${siteConfig.title}`
+const siteTitle = title
+	? `${title} ${titleSeparator} ${siteConfig.title}`
+	: `${siteConfig.title}`
 
 import { join } from 'path'
 import { AstroFont } from 'astro-font'
@@ -27,7 +30,7 @@ import { AstroFont } from 'astro-font'
 <!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
-<link rel='icon' type='favicon' href='../../public/branding/favicon.ico' />
+<link rel='icon' type='favicon' href='../../branding/favicon.ico' />
 <meta name='generator' content={Astro.generator} />
 
 <!-- Canonical URL -->
@@ -57,7 +60,12 @@ import { AstroFont } from 'astro-font'
 }
 
 <!-- RSS auto-discovery -->
-<link rel='alternate' type='application/rss+xml' title={siteConfig.title} href='/rss.xml' />
+<link
+	rel='alternate'
+	type='application/rss+xml'
+	title={siteConfig.title}
+	href='/rss.xml'
+/>
 
 <AstroFont
 	config={[

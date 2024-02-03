@@ -1,6 +1,7 @@
 ---
+import { Image } from 'astro:assets'
+import logo from '../../../public/branding/LightLogo.png'
 import Title from '../Title.astro'
-import Shape from '../icons/Shape.astro'
 type Props = {
 	title: string
 }
@@ -9,6 +10,6 @@ const { title } = Astro.props
 ---
 
 <div class='flex justify-start items-center gap-2 title'>
-	<Shape />
+	<Image src={logo} alt='SimplySteeped Logo' width='64' height='64' />
 	<Title>{title}</Title>
 </div>

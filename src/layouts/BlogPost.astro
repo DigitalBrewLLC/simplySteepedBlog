@@ -40,7 +40,9 @@ const articleDate = pubDate.toISOString()
 				</h1>
 			</div>
 
-			<div class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5'>
+			<div
+				class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5'
+			>
 				{tags.map((tag) => <Tag tag={tag} />)}
 			</div>
 		</header>
@@ -50,8 +52,8 @@ const articleDate = pubDate.toISOString()
 				heroImage && (
 					<Image
 						src={heroImage}
-						width={1080}
-						height={1080}
+						width={540}
+						height={540}
 						quality={100}
 						format='png'
 						loading='eager'
@@ -72,7 +74,9 @@ const articleDate = pubDate.toISOString()
 	const fnObserver = () => {
 		function handleIntersection(entries: IntersectionObserverEntry[]) {
 			entries.forEach((entry) => {
-				const index = document.querySelector(`aside a[href="#${entry.target.id}"]`)
+				const index = document.querySelector(
+					`aside a[href="#${entry.target.id}"]`
+				)
 
 				if (entry.isIntersecting) {
 					index?.classList.remove('bg-textLeaf', 'dark:bg-leaf') // remove bg
