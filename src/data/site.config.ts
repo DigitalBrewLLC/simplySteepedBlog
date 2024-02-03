@@ -9,9 +9,10 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	author: 'DanielCG', // Site author
-	title: 'Astro Theme OpenBlog', // Site title.
-	description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', // Description to display in the meta tags
+	author: 'SimplySteeped', // Site author
+	title: 'SimplySteeped | Tea Blog - Where your tea journey begins', // Site title.
+	description:
+		'Explore the vibrant world of tea with our tea reviews, brewing guides, and the latest in tea innovations and trends. Dive into a treasure trove of articles on green, black, herbal teas, and more, perfect for enthusiasts and newcomers alike',
 	lang: 'en-GB',
 	ogLocale: 'en_GB',
 	shareMessage: 'Share this post', // Message to share a post on social media

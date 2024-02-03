@@ -1,23 +1,13 @@
 {
-	"name": "blog-template",
+	"name": "@digitalbrew/simply-steeped",
 	"type": "module",
-	"version": "1.1.0",
-	"description": "A template for creating a blog with Astro",
-	"author": "danielcgilibert",
+	"version": "1",
+	"description": "SimplySteeped - a tea blog all about tea",
+	"author": "@digitalbrew",
 	"license": "GPL-3.0-only",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/danielcgilibert/blog-template"
-	},
-	"keywords": [
-		"astro",
-		"astrojs",
-		"astro-template",
-		"astro-blog",
-		"astro-b"
-	],
-	"bugs": {
-		"url": "https://github.com/danielcgilibert/blog-template/issues"
+		"url": "https://github.com/DigitalBrewLLC/simplySteepedBlog"
 	},
 	"scripts": {
 		"dev": "npx tinacms dev -c \"astro dev\"",

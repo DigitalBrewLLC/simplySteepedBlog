@@ -8,7 +8,7 @@
 
 Welcome to the GitHub repository for SimplySteeped! This blog is dedicated to all things tea, from brewing techniques, tea guides, tea innovations, trends, and more. Whether you're a seasoned tea connoisseur or just starting your tea journey, this blog aims to provide valuable insights, tips, and engaging content for all tea lovers.
 
-## About the Blog
+## About the Blog ~ My Passion Project
 
 SimplySteeped was created out of a passion for tea and a desire to share that passion with a broader audience. Here, you'll find posts covering:
 
@@ -36,4 +36,4 @@ We hope you enjoy diving into the world of tea with us. Happy brewing!
 
 ## 💻 Template base
 
-NOTE: this project was built using the following [template](https://github.com/danielcgilibert/blog-template) by [@danielcgilibert](https://github.com/danielcgilibert) - [template demo](https://blog-template-gray.vercel.app/)
+NOTE: this project was built using the following [template](https://github.com/danielcgilibert/blog-template) by [@danielcgilibert](https://github.com/danielcgilibert) - [demo](https://blog-template-gray.vercel.app/)

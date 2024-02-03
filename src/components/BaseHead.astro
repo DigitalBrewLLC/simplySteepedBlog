@@ -4,7 +4,7 @@ import '../styles/global.css'
 import { ViewTransitions } from 'astro:transitions'
 
 export interface Props {
-	title: string
+	title?: string
 	description?: string
 	ogImage?: string | undefined
 	articleDate?: string | undefined
@@ -16,7 +16,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/open-graph.png', Astro.url)
 
 const titleSeparator = '•'
 
-const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
+const siteTitle = title ? `${title} ${titleSeparator} ${siteConfig.title}` : `${siteConfig.title}`
 
 import { join } from 'path'
 import { AstroFont } from 'astro-font'

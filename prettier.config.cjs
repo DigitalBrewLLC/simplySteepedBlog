@@ -1,11 +1,10 @@
 /** @type {import("prettier").Config} */
 module.exports = {
-	// i am just using the standard config, change if you need something else
 	...require('prettier-config-standard'),
-	printWidth: 100,
+	printWidth: 80,
 	semi: false,
 	singleQuote: true,
-				jsxSingleQuote: true,
+	jsxSingleQuote: true,
 	tabWidth: 2,
 	useTabs: true,
 

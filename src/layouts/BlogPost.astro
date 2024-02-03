@@ -7,13 +7,12 @@ import type { MarkdownHeading } from 'astro'
 import { Image } from 'astro:assets'
 
 type Props = {
-	id: CollectionEntry<'blog'>['id']
 	data: CollectionEntry<'blog'>['data']
 	headings: MarkdownHeading[]
 	readTime: string
 }
 
-const { data, readTime, headings, id } = Astro.props
+const { data, readTime } = Astro.props
 const { title, description, pubDate, heroImage, tags } = data
 
 const articleDate = pubDate.toISOString()
@@ -30,7 +29,7 @@ const articleDate = pubDate.toISOString()
 			<div class='flex flex-col gap-2'>
 				<div class='flex items-center justify-center gap-x-1'>
 					<p class='text-center text-sm text-opacity-50'>
-						Published <FormattedDate date={pubDate} />
+						Published: <FormattedDate date={pubDate} />
 					</p>
 					<p class='text-center text-sm text-opacity-50 font-bold'>
 						- {readTime}
@@ -54,17 +53,15 @@ const articleDate = pubDate.toISOString()
 						width={1080}
 						height={1080}
 						quality={100}
-						format='jpg'
+						format='png'
 						loading='eager'
-						class='rounded-md w-full max-h-[300px]  md:max-h-[500px] my-8 object-cover'
+						class='rounded-md m-auto my-8 '
 						alt={`img of ${title}`}
 					/>
 				)
 			}
 		</>
-
 		<hr />
-
 		<div>
 			<slot />
 		</div>
@@ -73,29 +70,26 @@ const articleDate = pubDate.toISOString()
 
 <script>
 	const fnObserver = () => {
-		function handleIntersection(
-			entries: IntersectionObserverEntry[],
-			observer: IntersectionObserver
-		) {
+		function handleIntersection(entries: IntersectionObserverEntry[]) {
 			entries.forEach((entry) => {
 				const index = document.querySelector(`aside a[href="#${entry.target.id}"]`)
 
 				if (entry.isIntersecting) {
-					index?.classList.remove('bg-slate-200', 'dark:bg-slate-800') // remove bg
+					index?.classList.remove('bg-textLeaf', 'dark:bg-leaf') // remove bg
 					index?.classList.add(
-						'bg-indigo-600',
-						'dark:bg-indigo-700',
-						'text-white',
+						'bg-textLeaf',
+						'dark:bg-leaf',
+						'text-oatmeal',
 						'font-bold',
 						'transition-colors',
 						'duration-200'
 					)
 				} else {
-					index?.classList.add('bg-slate-200', 'dark:bg-slate-800') // add bg
+					index?.classList.add('bg-textLeaf', 'dark:bg-leaf') // add bg
 					index?.classList.remove(
-						'bg-indigo-600',
-						'dark:bg-indigo-700',
-						'text-white',
+						'bg-textLeaf',
+						'dark:bg-leaf',
+						'text-oatmeal',
 						'font-bold',
 						'transition-colors',
 						'duration-200'
