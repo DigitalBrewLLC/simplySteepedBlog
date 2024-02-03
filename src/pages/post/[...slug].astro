@@ -6,8 +6,6 @@ import ListRelatedPosts from '@/components/ListRelatedPosts'
 import TableOfContents from '@/components/Navigation/TableOfContents'
 import { getPosts } from '@/utils'
 import SButton from '@/components/mdx/SButton'
-import Disqus from '@/components/Disqus'
-import { disqusConfig } from '@/data/disqus.config'
 
 const posts = await getCollection('blog')
 export async function getStaticPaths() {
@@ -33,8 +31,6 @@ const getRelatedPosts = (post: Props) => {
 const relatedPosts = getRelatedPosts(post)
 
 const { Content, headings, remarkPluginFrontmatter } = await post.render()
-
-const disqusEnabled = disqusConfig.enabled
 ---
 
 <BlogPost data={post.data} headings={headings} readTime={remarkPluginFrontmatter.minutesRead}>
@@ -63,6 +59,4 @@ const disqusEnabled = disqusConfig.enabled
 			}
 		</article>
 	</div>
-
-	{disqusEnabled && <Disqus />}
 </BlogPost>

@@ -21,7 +21,7 @@ module.exports = {
 				black: colorScheme.black
 			},
 			fontFamily: {
-				body: ['Manrope', ...defaultTheme.fontFamily.sans]
+				body: ['Arsenal', ...defaultTheme.fontFamily.sans]
 			},
 			gridTemplateColumns: {
 				list: 'repeat(auto-fill, minmax(400px, max-content))'
