@@ -1,0 +1,65 @@
+---
+import BaseHead from '@/components/BaseHead'
+import Footer from '@/components/Navigation/Footer'
+import Header from '@/components/Navigation/Header'
+import ProviderAnimations from '@/components/ProviderAnimations'
+import ProviderTheme from '@/components/ProviderTheme'
+import TwSizeIndicator from '@/components/TwSizeIndicator'
+import EditBlog from '@/components/editBlog'
+
+const aboutMeta = {
+	title:
+		'SimplySteeped | Tea Blog - Your Ultimate Tea Guide to Brewing, Health Benefits, and Lifestyle',
+	description:
+		'Dive into our tea blog for a journey through the art of tea brewing, health benefits, and lifestyle integration. Discover the secrets to enhancing your well-being with every cup.'
+}
+---
+
+<html lang='en' class='scroll-smooth'>
+	<head>
+		<BaseHead title={aboutMeta.title} description={aboutMeta.description} />
+		<ProviderTheme />
+		<ProviderAnimations />
+	</head>
+
+	<body class='bg-oatmeal text-stone-950 dark:bg-[#0a0910] dark:text-oatmeal'>
+		<main
+			class='px-5 sm:mx-auto sm:max-w-2xl sm:px-8 lg:px-0 antialiased md:max-w-6xl grid gap-12 mt-4 overflow-hidden md:overflow-visible'
+		>
+			<Header />
+			<div class='px-6 py-24 sm:py-32'>
+				<div class='mx-auto max-w-2xl text-center'>
+					<p class='text-base font-semibold leading-7 text-leaf'>
+						A tea blog all about tea
+					</p>
+					<h2
+						class='mt-2 text-4xl font-bold tracking-tight text-black dark:text-oatmeal sm:text-6xl'
+					>
+						SimplySteeped
+					</h2>
+					<p class='mt-6 text-lg leading-8 text-black dark:text-oatmeal'>
+						Welcome to SimplySteeped, where our passion for tea transforms into
+						your journey toward a deeper appreciation of this ancient beverage.
+						Dive into a world where the ritual of tea brewing, the exploration
+						of its health benefits, and the art of integrating its essence into
+						your daily life converge to create a harmonious blend of tradition
+						and wellness. Our blog is designed to be your ultimate tea guide
+						companion in demystifying the complexities of tea, from simplifying
+						the art behind the perfect brew to revealing how different teas can
+						nurture your health and elevate your daily routines. Whether you're
+						seeking solace in a cup of tea or curious about how it can enrich
+						your life, SimplySteeped is your go-to source for all things tea.
+					</p>
+				</div>
+			</div>
+			<Footer />
+		</main>
+		<TwSizeIndicator />
+		<EditBlog />
+		<style>
+			body {
+				margin-left: calc(100vw - 100%);
+			}
+		</style>
+	</body>
+</html>
