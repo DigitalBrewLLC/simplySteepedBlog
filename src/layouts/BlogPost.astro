@@ -79,17 +79,18 @@ const articleDate = pubDate.toISOString()
 				)
 
 				if (entry.isIntersecting) {
-					index?.classList.remove('bg-textLeaf', 'dark:bg-leaf') // remove bg
+					index?.classList.remove('bg-textLeaf', 'dark:bg-slate-800') // remove bg
 					index?.classList.add(
 						'bg-textLeaf',
 						'dark:bg-leaf',
+
 						'text-oatmeal',
 						'font-bold',
 						'transition-colors',
 						'duration-200'
 					)
 				} else {
-					index?.classList.add('bg-textLeaf', 'dark:bg-leaf') // add bg
+					index?.classList.add('bg-textLeaf', 'dark:bg-slate-800') // add bg
 					index?.classList.remove(
 						'bg-textLeaf',
 						'dark:bg-leaf',
