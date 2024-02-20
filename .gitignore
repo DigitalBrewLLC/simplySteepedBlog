@@ -24,6 +24,3 @@ pnpm-debug.log*
 .DS_Store
 
 node_modules
-
-# google analytics
-src/components/GoogleAnalytics.astro
