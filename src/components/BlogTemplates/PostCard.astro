@@ -25,7 +25,10 @@ const {
 	<div class='flex justify-between flex-col gap-4 md:gap-0 py-6 pl-1'>
 		<div class='flex flex-col gap-3'>
 			<div class='flex flex-col gap-2'>
-				<a class='dark:text-oatmeal text-2xl font-semibold -tracking-wider' href={`/post/${slug}/`}>
+				<a
+					class='dark:text-oatmeal text-2xl font-semibold -tracking-wider'
+					href={`/post/${slug}/`}
+				>
 					{title}
 				</a>
 			</div>
@@ -47,7 +50,8 @@ const {
 				aria-label={`go to ${title}`}
 			>
 				Read Post
-				<span class='mt-[1px] group-hover:rotate-45 transition-transform duration-250 ease-in-out'
+				<span
+					class='mt-[1px] group-hover:rotate-45 transition-transform duration-250 ease-in-out'
 					><ArrowUp width='18' height='18' /></span
 				>
 			</a>

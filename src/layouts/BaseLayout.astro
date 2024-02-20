@@ -6,6 +6,7 @@ import ProviderTheme from '@/components/ProviderTheme'
 import ProviderAnimations from '@/components/ProviderAnimations'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 const { title, description, articleDate } = Astro.props
 ---
 
@@ -16,6 +17,7 @@ const { title, description, articleDate } = Astro.props
 			description={description}
 			articleDate={articleDate}
 		/>
+		<GoogleAnalytics />
 		<ProviderTheme />
 		<ProviderAnimations />
 	</head>

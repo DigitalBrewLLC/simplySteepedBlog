@@ -2,11 +2,11 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
+import partytown from '@astrojs/partytown'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 
-// https://astro.build/config
 export default defineConfig({
-	site: 'https://blog-template-gray.vercel.app/', // Write here your website url
+	site: 'https://simplysteeped.com/', // Write here your website url
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
@@ -25,6 +25,11 @@ export default defineConfig({
 			drafts: true
 		}),
 		sitemap(),
-		tailwind()
+		tailwind(),
+		partytown({
+			config: {
+				forward: ['dataLayer.push']
+			}
+		})
 	]
 })

@@ -6,6 +6,9 @@ import ProviderAnimations from '@/components/ProviderAnimations'
 import ProviderTheme from '@/components/ProviderTheme'
 import TwSizeIndicator from '@/components/TwSizeIndicator'
 import EditBlog from '@/components/editBlog'
+import { Image } from 'astro:assets'
+import logo from '../../public/branding/favicon.ico'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const aboutMeta = {
 	title:
@@ -18,6 +21,7 @@ const aboutMeta = {
 <html lang='en' class='scroll-smooth'>
 	<head>
 		<BaseHead title={aboutMeta.title} description={aboutMeta.description} />
+		<GoogleAnalytics />
 		<ProviderTheme />
 		<ProviderAnimations />
 	</head>
@@ -32,11 +36,19 @@ const aboutMeta = {
 					<p class='text-base font-semibold leading-7 text-leaf'>
 						A tea blog all about tea
 					</p>
+
 					<h2
 						class='mt-2 text-4xl font-bold tracking-tight text-black dark:text-oatmeal sm:text-6xl'
 					>
 						SimplySteeped
 					</h2>
+					<Image
+						class='mx-auto border-4 border-oatmeal rounded-full'
+						src={logo}
+						alt='SimplySteeped Logo'
+						width='250'
+						height='250'
+					/>
 					<p class='mt-6 text-lg leading-8 text-black dark:text-oatmeal'>
 						Welcome to SimplySteeped, where our passion for tea transforms into
 						your journey toward a deeper appreciation of this ancient beverage.

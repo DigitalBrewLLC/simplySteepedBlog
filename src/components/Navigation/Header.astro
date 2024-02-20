@@ -7,6 +7,8 @@ import Search from './Search.astro'
 import InstagramIcon from '../icons/social/InstagramIcon.astro'
 import PinterestIcon from '../icons/social/PinterestIcon.astro'
 import FacebookIcon from '../icons/social/FacebookIcon.astro'
+import { Image } from 'astro:assets'
+import logo from '../../../public/branding/favicon.ico'
 
 // ADD YOUR SOCIAL NETWORKS HERE
 const SOCIALNETWORKS = [
@@ -29,7 +31,10 @@ const SOCIALNETWORKS = [
 ---
 
 <header class='relative flex items-center h-12 font-semibold'>
-	<a class='text-lg mr-auto' href='/'>SimplySteeped</a>
+	<a class='text-lg mr-auto flex items-center' href='/'>
+		<Image src={logo} alt='SimplySteeped Logo' width='35' height='35' />
+		 SimplySteeped
+	</a>
 
 	<div
 		id='astro-header-drawer'
