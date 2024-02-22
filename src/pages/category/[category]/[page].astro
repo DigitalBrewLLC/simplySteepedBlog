@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout'
-import ListPosts from '@/components/ListPosts'
-import ListCategories from '@/components/BlogTemplates/ListCategories'
-import TitlePage from '@/components/BlogTemplates/TitlePage'
-import { sluglify, unsluglify, getCategories, getPosts } from '@/utils'
-import { siteConfig } from '@/data/site.config'
-import Pagination from '@/components/Navigation/Pagination'
+import ListCategories from 'src/components/BlogTemplates/ListCategories.astro'
+import TitlePage from 'src/components/BlogTemplates/TitlePage.astro'
+import ListPosts from 'src/components/ListPosts.astro'
+import Pagination from 'src/components/Navigation/Pagination.astro'
+import { siteConfig } from 'src/data/site.config'
+import BaseLayout from 'src/layouts/BaseLayout.astro'
+import { getCategories, getPosts, unsluglify, sluglify } from 'src/utils'
 
 const capitalize = (category: string) => {
 	return category

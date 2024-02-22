@@ -1,10 +1,10 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content'
-import BlogPost from '@/layouts/BlogPost'
-import ListRelatedPosts from '@/components/ListRelatedPosts'
-import TableOfContents from '@/components/Navigation/TableOfContents'
-import { getPosts } from '@/utils'
-import SButton from '@/components/mdx/SButton'
+import ListRelatedPosts from 'src/components/ListRelatedPosts.astro'
+import TableOfContents from 'src/components/Navigation/TableOfContents.astro'
+import SButton from 'src/components/mdx/SButton.astro'
+import BlogPost from 'src/layouts/BlogPost.astro'
+import { getPosts } from 'src/utils'
 
 const posts = await getCollection('blog')
 export async function getStaticPaths() {

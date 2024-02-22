@@ -58,8 +58,7 @@
 		"tailwind-merge": "2.0.0",
 		"tailwindcss": "3.3.5",
 		"tinacms": "^1.5.21",
-		"typescript": "^5.2.2",
-		"vite-plugin-alias": "^0.1.1"
+		"typescript": "^5.3.2"
 	},
 	"lint-staged": {
 		"*.{astro,js,jsx,ts,tsx,md,mdx,json}": [
