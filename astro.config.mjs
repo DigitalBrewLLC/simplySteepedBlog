@@ -9,7 +9,6 @@ import react from '@astrojs/react'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://simplysteeped.com/',
-	// Write here your website url
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
