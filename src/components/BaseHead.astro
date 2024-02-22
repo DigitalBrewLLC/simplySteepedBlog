@@ -9,6 +9,8 @@ export interface Props {
 	articleDate?: string | undefined
 }
 
+import logo from '../../public/branding/favicon.ico'
+
 const { title, description = siteConfig.description, articleDate } = Astro.props
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL('../branding/DarkSimpySteeped', Astro.url).href
@@ -28,7 +30,7 @@ import { AstroFont } from 'astro-font'
 <!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
-<link rel='icon' type='favicon' href='../../public/branding/favicon.ico' />
+<link rel='icon' type='favicon' href={logo} />
 <meta name='generator' content={Astro.generator} />
 
 <!-- Canonical URL -->
