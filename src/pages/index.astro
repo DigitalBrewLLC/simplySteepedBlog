@@ -1,9 +1,9 @@
 ---
-import ListCategories from 'src/components/BlogTemplates/ListCategories.astro'
-import TitlePage from 'src/components/BlogTemplates/TitlePage.astro'
-import ListPosts from 'src/components/ListPosts.astro'
-import BaseLayout from 'src/layouts/BaseLayout.astro'
-import { getPosts } from 'src/utils/post'
+import ListCategories from '../components/BlogTemplates/ListCategories.astro'
+import TitlePage from '../components/BlogTemplates/TitlePage.astro'
+import ListPosts from '../components/BlogTemplates/ListCategories.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getPosts } from '../utils/post'
 
 const MAX_POSTS = 6 // max number of posts to show on the home page
 const posts = await getPosts(MAX_POSTS)
