@@ -5,13 +5,11 @@ import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import react from '@astrojs/react'
-import alias from 'vite-plugin-alias'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
 // Convert the file URL to a file path
 const __filename = fileURLToPath(import.meta.url)
-
 // Get the directory name from the file path
 const __dirname = path.dirname(__filename)
 
@@ -26,32 +24,16 @@ export default defineConfig({
 		}
 	},
 	vite: {
-		plugins: [
-			alias({
-				entries: [
-					{
-						find: '@/components',
-						replacement: path.resolve(__dirname, './src/components')
-					},
-					{
-						find: '@/layouts',
-						replacement: path.resolve(__dirname, './src/layouts')
-					},
-					{
-						find: '@/styles',
-						replacement: path.resolve(__dirname, './src/styles')
-					},
-					{
-						find: '@/utils',
-						replacement: path.resolve(__dirname, './src/utils')
-					},
-					{
-						find: '@/site-config',
-						replacement: path.resolve(__dirname, './src/data/site.config.ts')
-					}
-				]
-			})
-		]
+		resolve: {
+			alias: {
+				// Define your path aliases here
+				'@/components': path.resolve(__dirname, './src/components'),
+				'@/layouts': path.resolve(__dirname, './src/layouts'),
+				'@/styles': path.resolve(__dirname, './src/styles'),
+				'@/utils': path.resolve(__dirname, './src/utils'),
+				'@/site-config': path.resolve(__dirname, './src/data/site.config.ts')
+			}
+		}
 	},
 	integrations: [
 		mdx({
