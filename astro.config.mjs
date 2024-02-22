@@ -6,6 +6,7 @@ import partytown from '@astrojs/partytown'
 import { remarkReadingTime } from './src/utils/readTime.ts'
 import react from '@astrojs/react'
 import alias from 'vite-plugin-alias'
+import path from 'path'
 
 export default defineConfig({
 	site: 'https://simplysteeped.com/',
@@ -23,23 +24,23 @@ export default defineConfig({
 				entries: [
 					{
 						find: '@/components',
-						replacement: './src/components'
+						replacement: path.resolve(__dirname, 'src/components/*.astro')
 					},
 					{
 						find: '@/layouts',
-						replacement: './src/layouts'
+						replacement: path.resolve(__dirname, 'src/layouts/*.astro')
 					},
 					{
 						find: '@/styles',
-						replacement: './src/styles'
+						replacement: path.resolve(__dirname, 'src/styles')
 					},
 					{
 						find: '@/utils',
-						replacement: './src/utils'
+						replacement: path.resolve(__dirname, 'src/utils/index.ts')
 					},
 					{
 						find: '@/site-config',
-						replacement: './src/data/site.config.ts'
+						replacement: path.resolve(__dirname, 'src/data/site.config.ts')
 					}
 				]
 			})
