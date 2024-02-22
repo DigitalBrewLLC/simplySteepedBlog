@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
 import { remarkReadingTime } from './src/utils/readTime.ts'
-import react from '@astrojs/react'
+// import react from '@astrojs/react'
 
 export default defineConfig({
 	site: 'https://simplysteeped.com/',
@@ -31,7 +31,7 @@ export default defineConfig({
 			config: {
 				forward: ['dataLayer.push']
 			}
-		}),
-		react()
+		})
+		// react()
 	]
 })
