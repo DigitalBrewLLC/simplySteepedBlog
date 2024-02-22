@@ -1,8 +1,8 @@
 ---
-import TitlePage from 'src/components/BlogTemplates/TitlePage.astro'
-import ListPosts from 'src/components/ListPosts.astro'
-import BaseLayout from 'src/layouts/BaseLayout.astro'
-import { getTags, getPostByTag } from 'src/utils'
+import TitlePage from '../../../components/BlogTemplates/TitlePage.astro'
+import ListPosts from '../../../components/ListPosts.astro'
+import BaseLayout from '../../../layouts/BaseLayout.astro'
+import { getTags, getPostByTag } from '../../../utils'
 
 export async function getStaticPaths() {
 	const tags = await getTags()
