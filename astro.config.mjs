@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
 import { remarkReadingTime } from './src/utils/readTime.ts'
-// import react from '@astrojs/react'
+import react from '@astrojs/react'
 
 export default defineConfig({
 	site: 'https://simplysteeped.com/',
@@ -15,6 +15,34 @@ export default defineConfig({
 			theme: 'material-theme-palenight',
 			wrap: true
 		}
+	},
+	vite: {
+		plugins: [
+			alias({
+				entries: [
+					{
+						find: '@/components',
+						replacement: path.resolve(__dirname, './src/components')
+					},
+					{
+						find: '@/layouts',
+						replacement: path.resolve(__dirname, './src/layouts')
+					},
+					{
+						find: '@/styles',
+						replacement: path.resolve(__dirname, './src/styles')
+					},
+					{
+						find: '@/utils',
+						replacement: path.resolve(__dirname, './src/utils')
+					},
+					{
+						find: '@/site-config',
+						replacement: path.resolve(__dirname, './src/data/site.config.ts')
+					}
+				]
+			})
+		]
 	},
 	integrations: [
 		mdx({
@@ -31,7 +59,7 @@ export default defineConfig({
 			config: {
 				forward: ['dataLayer.push']
 			}
-		})
-		// react()
+		}),
+		react()
 	]
 })
