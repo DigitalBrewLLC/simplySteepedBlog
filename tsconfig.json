@@ -3,7 +3,7 @@
 	"baseUrl": ".",
 	"compilerOptions": {
 		"strictNullChecks": true,
-		"baseUrl": "C:/webdev/DB/SimplySteeped/tea",
+		"baseUrl": ".",
 		"verbatimModuleSyntax": true,
 		"jsx": "react-jsx",
 		"jsxImportSource": "react"
