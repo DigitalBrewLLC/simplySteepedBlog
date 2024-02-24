@@ -2,7 +2,7 @@
 import { type CollectionEntry, getCollection } from 'astro:content'
 import ListRelatedPosts from '../../components/ListRelatedPosts.astro'
 import TableOfContents from '../../components/Navigation/TableOfContents.astro'
-import SButton from '../../components/mdx/SButton.astro'
+import BlogImage from '../../components/mdx/BlogImage.astro'
 import BlogPost from '../../layouts/BlogPost.astro'
 import { getPosts } from '../../utils'
 
@@ -54,7 +54,7 @@ const { Content, headings, remarkPluginFrontmatter } = await post.render()
 			<div
 				class='prose prose-lg md:prose-xl dark:prose-invert mb-12 min-w-full'
 			>
-				<Content components={{ pre: SButton }} />
+				<Content components={{ img: BlogImage }} />
 			</div>
 
 			<!-- related posts -->

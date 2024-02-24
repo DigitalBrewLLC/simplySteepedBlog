@@ -1,7 +1,6 @@
 import { CATEGORIES } from '../src/data/categories.ts'
 import { defineConfig } from 'tinacms'
 
-// Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || 'main'
 
 export default defineConfig({
@@ -39,7 +38,7 @@ export default defineConfig({
 						required: true,
 						name: 'category',
 						label: 'Category',
-						description: 'Select an category for this post',
+						description: 'Select a category for this post',
 						options: [...CATEGORIES]
 					},
 					{
@@ -82,19 +81,56 @@ export default defineConfig({
 					{
 						type: 'rich-text',
 						label: 'Body',
-						name: 'SButton',
+						name: 'body', // Updated name for clarity
 						isBody: true,
 						templates: [
-							// Custom Components
+							// BlogImage Component
 							{
-								label: 'SButton',
-								name: 'SButton',
+								label: 'BlogImage',
+								name: 'BlogImage',
 								fields: [
 									{
-										type: 'rich-text',
-										label: 'SButton',
-										name: 'children',
-										isBody: true
+										type: 'image',
+										label: 'Image',
+										name: 'src',
+										description: 'Upload or select an image'
+									},
+									{
+										type: 'string',
+										label: 'Alt Text',
+										name: 'alt',
+										description: 'Alternative text for the image'
+									}
+								]
+							},
+							// BlogImage Component
+							{
+								label: 'SideBySideImages',
+								name: 'SideBySideImages',
+								fields: [
+									{
+										type: 'image',
+										label: 'Image',
+										name: 'image1',
+										description: 'Upload or select an image'
+									},
+									{
+										type: 'string',
+										label: 'Alt Text',
+										name: 'alt1',
+										description: 'Alternative text for the image'
+									},
+									{
+										type: 'image',
+										label: 'Image',
+										name: 'image2',
+										description: 'Upload or select an image'
+									},
+									{
+										type: 'string',
+										label: 'Alt Text',
+										name: 'alt2',
+										description: 'Alternative text for the image'
 									}
 								]
 							}
