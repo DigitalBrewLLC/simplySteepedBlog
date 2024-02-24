@@ -1,6 +1,5 @@
 {
 	"extends": "astro/tsconfigs/strict",
-	"baseUrl": ".",
 	"compilerOptions": {
 		"strictNullChecks": true,
 		"baseUrl": ".",
