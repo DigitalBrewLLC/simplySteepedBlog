@@ -43,7 +43,7 @@ const articleDate = pubDate.toISOString()
 			<div
 				class='flex flex-wrap justify-center items-center gap-2 gap-y-4 md:gap-5'
 			>
-				{tags.map((tag) => <Tag tag={tag} />)}
+				{tags.map((tag: string) => <Tag tag={tag} />)}
 			</div>
 		</header>
 
@@ -58,7 +58,7 @@ const articleDate = pubDate.toISOString()
 						format='png'
 						loading='eager'
 						class='rounded-md m-auto my-8 '
-						alt={`img of ${title}`}
+						alt={`Tea Blog: ${title}`}
 					/>
 				)
 			}

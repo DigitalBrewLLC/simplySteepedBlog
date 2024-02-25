@@ -6,9 +6,12 @@ import partytown from '@astrojs/partytown';
 import { remarkReadingTime } from './src/utils/readTime.ts';
 import react from '@astrojs/react';
 
+import netlify from "@astrojs/netlify";
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://simplysteeped.com/',
+  output: 'static',
   markdown: {
     remarkPlugins: [remarkReadingTime],
     drafts: true,
@@ -28,5 +31,6 @@ export default defineConfig({
     config: {
       forward: ['dataLayer.push']
     }
-  }), react()]
+  }), react()],
+  adapter: netlify()
 });

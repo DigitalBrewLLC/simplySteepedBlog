@@ -23,6 +23,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"@astrojs/netlify": "^5.1.2",
 		"@astrojs/partytown": "^2.0.4",
 		"@astrojs/react": "^3.0.10",
 		"@astrojs/rss": "4.0.1",
