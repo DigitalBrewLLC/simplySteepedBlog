@@ -24,27 +24,21 @@ const siteTitle = title
 import { AstroFont } from 'astro-font'
 ---
 
-<!-- ViewTransitions  -->
 <ViewTransitions />
 
-<!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
 <link rel='icon' type='favicon' href={logo} />
 <meta name='generator' content={Astro.generator} />
 
-<!-- Canonical URL -->
 <link rel='canonical' href={canonicalURL} />
 
-<!-- Primary Meta Tags -->
 <title>{siteTitle}</title>
 
-<!-- SEO -->
 <meta name='title' content={siteTitle} />
 <meta name='description' content={description} />
 <meta name='author' content={siteConfig.author} />
 
-<!-- Facebook -->
 <meta property='og:type' content={articleDate ? 'article' : 'website'} />
 <meta property='og:url' content={Astro.url} />
 <meta property='og:title' content={title} />
@@ -59,9 +53,6 @@ import { AstroFont } from 'astro-font'
 	)
 }
 
-<!-- Google Analytics -->
-
-<!-- RSS auto-discovery -->
 <link
 	rel='alternate'
 	type='application/rss+xml'
